@@ -1,7 +1,6 @@
 # Weather Forcast.
 
 ## Get weather information
-#### Api link: [https://jsonplaceholder.typicode.com/albums](https://jsonplaceholder.typicode.com/albums)
 This application will show you the current weather status and also the searched cities.
 ## Tech Stack
 * Bootstrap
