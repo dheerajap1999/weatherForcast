@@ -1,0 +1,139 @@
+/* Weather.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #6dd5fa, #2980b9);
+    min-height: 100vh;
+}
+
+.weatherContainerDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weatherContainer {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 850px;
+    max-width: 90%;
+    margin: 20px;
+}
+
+.weatherContainer h2 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+
+.weatherCard {
+    background: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.weatherUl{
+    display: flex;
+    padding: 25px 0;
+    list-style: none;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+.weatherLi{
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 49%;
+        padding: 20px;
+        margin:5px ;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px #00000026;
+        scroll-snap-align: start;
+        transition: all .2s;
+        background-color: white;
+        background: linear-gradient(0deg, #c5cddd 0%, #6b8bc7 100%);
+}
+
+.weatherimg {
+    display: block;
+    margin: 0;
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.cardImg{
+    margin: 3px;
+    animation-name: Sidefloating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+    0% {
+        transform: translate(0, 0px);
+    }
+
+    50% {
+        transform: translate(0, 20px);
+    }
+
+    100% {
+        transform: translate(0, -0px);
+    }
+}
+
+@keyframes Sidefloating {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(30px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.weatherCard p {
+    margin: 5px 0;
+    color: #34495e;
+}
+
+.navbar {
+    background: #2980b9;
+}
+
+.navbar .navbarBrand {
+    color: #ffffff;
+}
+
+.navbar .formControl {
+    border-radius: 0;
+}
+
+.navbar .btn {
+    border-radius: 0;
+}
+
+@media screen and (max-width: 830px){
+    .weatherUl{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
